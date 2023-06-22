@@ -3,14 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ResistenciasComponent } from './resistencias/resistencias.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DistanciasModule } from './distancias-module/distancias.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ResistenciasComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    DistanciasModule
   ],
   providers: [],
   bootstrap: [AppComponent]
