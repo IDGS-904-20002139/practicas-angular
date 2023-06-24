@@ -1,20 +1,60 @@
 <div class="row">
     <div class="col-6">
         <div class="md-3">
-            <label for="" class="form-label">Numero 1</label>
-            <div *ngFor="let op of banda1" [value]="op" style="margin: 10px;">
-                {{op}}
-              </div>
+            <h3>Banda 1:</h3>
+            <select name="Banda1" id="Banda1" [(ngModel)]="banda1">
+                <option *ngFor="let op of coloresBanda" [value]="op" [style.background-color]="op">{{op}}</option>
+            </select> 
         </div>
         <div class="md-3">
-            <label for="" class="form-label">Numero 2</label>
-            <input type="text" [(ngModel)]="num2"  name="num2" placeholder="Numero1" class="form-control">
+            <h3>Banda 2:</h3>
+            <select name="Banda2" id="Banda2" [(ngModel)]="banda2">
+                <option *ngFor="let op of coloresBanda" [value]="op" [style.background-color]="op">{{op}}</option>
+            </select>
         </div>
         <div class="md-3">
-            <button class="btn btn-primary" (click)="sumar()">Calcular</button>
+            <h3>Multiplicador:</h3>
+            <select name="Multiplicador" id="Multiplicador" [(ngModel)]="multi">
+                <option *ngFor="let op of coloresBanda" [value]="op" [style.background-color]="op">{{op}}</option>
+            </select>
+        </div>
+        <div class="md-3">
+            <h3>Tolerancia:</h3>
+            <div class="form-check form-check-inline">
+                <input type="radio" name="valorTolerancia" [(ngModel)]="valorTolerancia" value="0.05">
+                <label class="form-check-label" for="tolerancia">5%</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="radio" name="valorTolerancia" [(ngModel)]="valorTolerancia" value="0.1">
+                <label class="form-check-label" for="tolerancia">10%</label>
+            </div>
+        </div>
+        <div class="md-3">
+            <button class="btn btn-primary" (click)="calcularResistencia()">Calcular</button>
         </div>
     </div>
     <div class="col-6">
-        <h2>La suma es: {{resultado}}</h2>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Banda 1</th>
+                <th scope="col">Banda 2</th>
+                <th scope="col">Multiplicador</th>
+                <th scope="col">Valor Maximo</th>
+                <th scope="col">Valor Minimo</th>
+                <th scope="col">Valor Nominal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{{banda1}}</td>
+                <td>{{banda2}}</td>
+                <td>{{multi}}</td>
+                <td>{{valorMax}}</td>
+                <td>{{valorMin}}</td>
+                <td>{{valorResistencia}}</td>
+              </tr>
+            </tbody>
+          </table>
     </div>
 </div>
