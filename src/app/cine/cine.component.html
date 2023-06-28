@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="row">
+    <h1  style="text-align: center;">Cinepolis</h1>
+    <div class="col-6 border border-dark ">
+    <h1>Entradas</h1>
+      <mat-form-field>
+        <label>Nombre</label>
+        <input matInput [(ngModel)]="nombre" type="text">
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <label>Cantidad Compradores</label>
+        <input matInput [(ngModel)]="ccompradores" type="number">
+      </mat-form-field>
+      <div class="md-3">
+        <h3>Tarjeta CINECO:</h3>
+        <div class="form-check form-check-inline">
+            <input type="radio" name="valorTarjeta" [(ngModel)]="valorTarjeta" value="1">
+            <label class="form-check-label" for="tarjeta">Si</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input type="radio" name="valorTarjeta" [(ngModel)]="valorTarjeta" value="2">
+            <label class="form-check-label" for="tarjeta">No</label>
+        </div>
+      </div>
+      <mat-form-field>
+        <label>Cantidad Boletos</label>
+        <input matInput [(ngModel)]="cboletos" type="number">
+      </mat-form-field>
+      <br>
+    </div>
+
+    <div class="col-6 border border-dark">
+      <h1>Salidas</h1>
+      <div class="my-5">
+        <h3 style="text-align: center;">Datos de compra</h3>
+        <p>Los boletos estan a nombre de: {{nombre}}</p>
+        <p>{{aviso}}</p>
+        <h2>El costo de total es de ${{valPagoTotal}}</h2>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<div class="container border border-dark">
+  <div class="row my-5">
+    <h1>Acciones</h1>
+    <div>
+      <button class="mx-3" mat-button (click)="calcular()" color="primary">Procesar</button>
+      <button class="mx-3" mat-button (click)="refrescar()" color="primary">Salir</button>
+    </div>
+  </div>
+</div>

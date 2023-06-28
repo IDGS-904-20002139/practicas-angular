@@ -16,17 +16,13 @@ export class ResistenciasComponent {
     'black',
     'brown',
     'red',
-    'oranje',
+    'orange',
     'yellow',
     'green',
     'blue',
     'purple',
     'gray',
     'white'
-  ];
-
-  opcionBanda = [
-    0, 1, 2, 3, 4, 5, 6, 7, 8, 9
   ];
 
   toleranciaColor = [
@@ -59,7 +55,7 @@ export class ResistenciasComponent {
           break;
       case 'red': return 2;
           break;
-      case 'oranje': return 3;
+      case 'orange': return 3;
           break;
       case 'yellow': return 4;
           break;

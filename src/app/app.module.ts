@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ResistenciasComponent } from './resistencias/resistencias.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DistanciasModule } from './distancias-module/distancias.module';
+import { CineModule } from './cine/cine.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DistanciasModule } from './distancias-module/distancias.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    DistanciasModule
+    DistanciasModule,
+    CineModule
   ],
   providers: [],
   bootstrap: [AppComponent]

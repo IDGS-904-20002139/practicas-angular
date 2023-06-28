@@ -22,11 +22,11 @@
             <h3>Tolerancia:</h3>
             <div class="form-check form-check-inline">
                 <input type="radio" name="valorTolerancia" [(ngModel)]="valorTolerancia" value="0.05">
-                <label class="form-check-label" for="tolerancia">5%</label>
+                <label class="form-check-label" for="tolerancia">Oro 5%</label>
             </div>
             <div class="form-check form-check-inline">
                 <input type="radio" name="valorTolerancia" [(ngModel)]="valorTolerancia" value="0.1">
-                <label class="form-check-label" for="tolerancia">10%</label>
+                <label class="form-check-label" for="tolerancia">Plata 10%</label>
             </div>
         </div>
         <div class="md-3">
@@ -47,9 +47,9 @@
             </thead>
             <tbody>
               <tr>
-                <td>{{banda1}}</td>
-                <td>{{banda2}}</td>
-                <td>{{multi}}</td>
+                <td [style.background-color]="banda1">{{banda1}}</td>
+                <td [style.background-color]="banda2">{{banda2}}</td>
+                <td [style.background-color]="multi">{{multi}}</td>
                 <td>{{valorMax}}</td>
                 <td>{{valorMin}}</td>
                 <td>{{valorResistencia}}</td>
