@@ -7,11 +7,14 @@ import { ResistenciasComponent } from './resistencias/resistencias.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DistanciasModule } from './distancias-module/distancias.module';
 import { CineModule } from './cine/cine.module';
+import { MenuComponent } from './menu/menu.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ResistenciasComponent
+    ResistenciasComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
@@ -19,7 +22,8 @@ import { CineModule } from './cine/cine.module';
     BrowserAnimationsModule,
     FormsModule,
     DistanciasModule,
-    CineModule
+    CineModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
